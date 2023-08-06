@@ -21,7 +21,7 @@ const list = [
   }
 ]
 
-function App() {
+const App = () => {
   // const welcome = {
   //   greeting: 'Hey',
   //   title: 'React',
@@ -42,7 +42,7 @@ function App() {
   )
   }
 
-  function List() {
+  const List = () => {
     return list.map(function(item){
       return(
         <div key={item.objectID}>
