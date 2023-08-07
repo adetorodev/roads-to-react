@@ -47,13 +47,9 @@ const App = () => {
 };
 
 const List = ({ list }) =>
-  list.map( item => <Item key={item.objectID} item={item} />)
+  list.map( item => <Item key={item.objectID} { ...item} item={item} />)
 
-  const Item = ({ 
-    item: {
-    title, url, author, num_comments, point
-  }, 
-}) => (
+  const Item = ({ title, url, author, num_comments, point }) => (
     <div>
       <span>
         <a href={url}>{title}</a>
